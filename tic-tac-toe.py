@@ -139,16 +139,6 @@ def playTTT():
     while printColor('2', color2, 'return') == None:
         print("That is not a availibel color player 2.")
         color2 = input(f"What would play 2/O color like to be? Pick from: \n - {printColor('red', 'red', 'return')}\n - {printColor('green', 'green', 'return')} \n - {printColor('yellow', 'yellow', 'return')} \n - {printColor('blue', 'blue', 'return')} \n - {printColor('voilet', 'voilet', 'return')} \n - {printColor('beige', 'beige', 'return')} \n")
-        
-    # if color1 != 'red' or color1 != 'green' or color1 != 'yellow' or color1 != 'blue' or color1 != 'voilet' or color1 != 'beige':
-    #     print("That is not a availibel color player 1. Your color will be blue")
-    #     color1 = 'blue'
-    # else:
-    #     pass
-    # if color2 != 'red' or color2 != 'green' or color2 != 'yellow' or color2 != 'blue' or color2 != 'voilet' or color2 != 'beige':
-    #     while color2 != 'red' or color2 != 'green' or color2 != 'yellow' or color2 != 'blue' or color2 != 'voilet' or color2 != 'beige':
-    #         print("That is not a availibel color player 1")
-    #         color2 = input(f"What would play 1/X color like to be? Pick from: \n - {printColor('red', 'red', 'return')}\n - {printColor('green', 'green', 'return')} \n - {printColor('yellow', 'yellow', 'return')} \n - {printColor('blue', 'blue', 'return')} \n - {printColor('voilet', 'voilet', 'return')} \n - {printColor('beige', 'beige', 'return')} \n")
 
     printTTT(board, color1, color2)
     while playing == True:
