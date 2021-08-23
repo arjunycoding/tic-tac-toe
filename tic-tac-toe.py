@@ -130,18 +130,15 @@ def playTTT():
     color1 = input(f"What would play 1/X color like to be? Pick from: \n - {printColor('red', 'red', 'return')}\n - {printColor('green', 'green', 'return')} \n - {printColor('yellow', 'yellow', 'return')} \n - {printColor('blue', 'blue', 'return')} \n - {printColor('voilet', 'voilet', 'return')} \n - {printColor('beige', 'beige', 'return')} \n")
     color2 = input(f"What would play 2/O color like to be? Pick from: \n - {printColor('red', 'red', 'return')}\n - {printColor('green', 'green', 'return')} \n - {printColor('yellow', 'yellow', 'return')} \n - {printColor('blue', 'blue', 'return')} \n - {printColor('voilet', 'voilet', 'return')} \n - {printColor('beige', 'beige', 'return')} \n")
     print(printColor('1', color1, 'return')==None)
-    if color1 == color2:
-        print("Player 2's color should not be the same as color 1")
-        color2 = input(f"What would play 2/O color like to be? Pick from: \n - {printColor('red', 'red', 'return')}\n - {printColor('green', 'green', 'return')} \n - {printColor('yellow', 'yellow', 'return')} \n - {printColor('blue', 'blue', 'return')} \n - {printColor('voilet', 'voilet', 'return')} \n - {printColor('beige', 'beige', 'return')} \n")
-        while color2 == color1:
+    while color2 == color1:
                 print("Player 2's color should not be the same as color 1")
                 color2 = input(f"What would play 2/O color like to be? Pick from: \n - {printColor('red', 'red', 'return')}\n - {printColor('green', 'green', 'return')} \n - {printColor('yellow', 'yellow', 'return')} \n - {printColor('blue', 'blue', 'return')} \n - {printColor('voilet', 'voilet', 'return')} \n - {printColor('beige', 'beige', 'return')} \n")
-    if printColor('1', color1, 'return') == None:
-        print("That is not a availibel color player 1. Your color will be blue")
-        color1 = 'blue'
-    if printColor('2', color2, 'return') == None:
-        print("That is not a availibel color player 1. Your color will be beige")
-        color2 = 'beige'
+    while printColor('1', color1, 'return') == None:
+        print("That is not a availibel color player 1.")
+        color1 = input(f"What would play 1/X color like to be? Pick from: \n - {printColor('red', 'red', 'return')}\n - {printColor('green', 'green', 'return')} \n - {printColor('yellow', 'yellow', 'return')} \n - {printColor('blue', 'blue', 'return')} \n - {printColor('voilet', 'voilet', 'return')} \n - {printColor('beige', 'beige', 'return')} \n")
+    while printColor('2', color2, 'return') == None:
+        print("That is not a availibel color player 2.")
+        color2 = input(f"What would play 2/O color like to be? Pick from: \n - {printColor('red', 'red', 'return')}\n - {printColor('green', 'green', 'return')} \n - {printColor('yellow', 'yellow', 'return')} \n - {printColor('blue', 'blue', 'return')} \n - {printColor('voilet', 'voilet', 'return')} \n - {printColor('beige', 'beige', 'return')} \n")
         
     # if color1 != 'red' or color1 != 'green' or color1 != 'yellow' or color1 != 'blue' or color1 != 'voilet' or color1 != 'beige':
     #     print("That is not a availibel color player 1. Your color will be blue")
