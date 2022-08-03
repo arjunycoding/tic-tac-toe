@@ -127,19 +127,8 @@ def playTTT():
         Enter a number between 1-9 
         The number you input will make a x or o apper in the square that contains your number
     """)
-    color1 = input(f"What would play 1/X color like to be? Pick from: \n - {printColor('red', 'red', 'return')}\n - {printColor('green', 'green', 'return')} \n - {printColor('yellow', 'yellow', 'return')} \n - {printColor('blue', 'blue', 'return')} \n - {printColor('voilet', 'voilet', 'return')} \n - {printColor('beige', 'beige', 'return')} \n")
-    color2 = input(f"What would play 2/O color like to be? Pick from: \n - {printColor('red', 'red', 'return')}\n - {printColor('green', 'green', 'return')} \n - {printColor('yellow', 'yellow', 'return')} \n - {printColor('blue', 'blue', 'return')} \n - {printColor('voilet', 'voilet', 'return')} \n - {printColor('beige', 'beige', 'return')} \n")
-    print(printColor('1', color1, 'return')==None)
-    while color2 == color1:
-                print("Player 2's color should not be the same as color 1")
-                color2 = input(f"What would play 2/O color like to be? Pick from: \n - {printColor('red', 'red', 'return')}\n - {printColor('green', 'green', 'return')} \n - {printColor('yellow', 'yellow', 'return')} \n - {printColor('blue', 'blue', 'return')} \n - {printColor('voilet', 'voilet', 'return')} \n - {printColor('beige', 'beige', 'return')} \n")
-    while printColor('1', color1, 'return') == None:
-        print("That is not a availibel color player 1.")
-        color1 = input(f"What would play 1/X color like to be? Pick from: \n - {printColor('red', 'red', 'return')}\n - {printColor('green', 'green', 'return')} \n - {printColor('yellow', 'yellow', 'return')} \n - {printColor('blue', 'blue', 'return')} \n - {printColor('voilet', 'voilet', 'return')} \n - {printColor('beige', 'beige', 'return')} \n")
-    while printColor('2', color2, 'return') == None:
-        print("That is not a availibel color player 2.")
-        color2 = input(f"What would play 2/O color like to be? Pick from: \n - {printColor('red', 'red', 'return')}\n - {printColor('green', 'green', 'return')} \n - {printColor('yellow', 'yellow', 'return')} \n - {printColor('blue', 'blue', 'return')} \n - {printColor('voilet', 'voilet', 'return')} \n - {printColor('beige', 'beige', 'return')} \n")
-
+    color1 = 'blue'
+    color2 = 'red'
     printTTT(board, color1, color2)
     while playing == True:
         for i in range(10):
@@ -190,10 +179,10 @@ def playTTT():
                 printTTT(board, color1, color2)
             win = checkwin(board, turn)
             if win == "xwins":
-                print("X has won the game!!!")
+                printColor("X has won the game!!!", "green", "print")
                 break
             elif checkwin(board, turn) == "owins":
-                print("O has won the game!!!")
+                printColor("O has won the game!!!", "green", "print")
                 break
             turn+=1
 

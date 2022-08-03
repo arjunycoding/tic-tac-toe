@@ -19,6 +19,8 @@ def printColor(text, color, type):
             print(CVIOLET + text + CEND)
         elif color.lower() == 'beige':
             print(CBEIGE + text + CEND)
+        elif color.lower() == 'green':
+            return CGREEN + text + CEND
     else:
         if color.lower() == 'red':
             return CRED + text + CEND
