@@ -35,7 +35,8 @@ def printTTT(board, color1, color2):
         print("    ")
 
         print("         |         |        ")
-        print(" ---------------------------")
+        if not(i == 2):
+            print(" - - - - - - - - - - - - - - ")
         rowPos+=3
 # CHeck Move
 def checkmove(board, move):
